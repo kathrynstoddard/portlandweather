@@ -1,0 +1,33 @@
+<div class="panel-group" id="accordion">
+  {{#collection tag=tbody}}
+
+  <div class="panel panel-default">
+  
+
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          {{formattedTime time "MMMM DD"}}
+        </a>
+      </h4>
+    </div>
+
+
+    <div id="collapseOne" class="panel-collapse collapse">
+    
+      <div class="panel-body">
+        Low: {{temperatureMin}}&deg;
+        High: {{temperatureMax}}&deg;
+        {{summary}} 
+      </div>
+
+    </div>
+
+    
+  </div>
+
+
+
+  {{/collection}}
+</div>
+  

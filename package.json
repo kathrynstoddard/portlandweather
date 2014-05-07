@@ -1,0 +1,28 @@
+{
+  "name": "PortlandWeather",
+  "version": "0.0.1",
+  "description": "Weather App for Portland",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kathrynstoddard/portlandweather"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "request": "~2.34.0",
+    "moment": "~2.5.1"
+  },
+  "keywords": [
+    "Weather",
+    "Forecast"
+  ],
+  "author": "Kathryn Stoddard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kathrynstoddard/portlandweather/issues"
+  },
+  "homepage": "https://github.com/kathrynstoddard/portlandweather"
+}
