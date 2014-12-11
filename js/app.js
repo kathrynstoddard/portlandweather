@@ -13,14 +13,14 @@ define(function (require) {
   var apiKey  = "716f8cdefa802309e216d516cb986a6e";
   var url     = 'https://api.forecast.io/forecast'
 
-  $.getJSON('url + '/' + apiKey + '/' + latLong + '?callback=?'')
+  $.getJSON('url + '/' + apiKey + '/' + latLong')
    .done(main)
    .fail(function () {
       $('#loading-message').text('Your data failed to load :(');
    });
 
   function main (data) {
-    
+
     $('#loading-message').text('Your weather is now!');
 
     var currentWeatherModel      = new WeatherConditions(data.currently);
