@@ -10,10 +10,10 @@ define(function (require) {
   var app = {};
 
   var latLong = "45.5330,-122.6894";
-  var apiKey  = "d2a6fbba414f1077111054196173e812";
+  var apiKey  = "716f8cdefa802309e216d516cb986a6e";
   var url     = 'https://api.forecast.io/forecast'
 
-  $.getJSON(url + '/' + apiKey + '/' + latLong + '?callback=?')
+  $.getJSON('url + '/' + apiKey + '/' + latLong + '?callback=?'')
    .done(main)
    .fail(function () {
       $('#loading-message').text('Your data failed to load :(');

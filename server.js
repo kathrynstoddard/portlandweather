@@ -7,18 +7,15 @@ var fs 		= require('fs'),
 	request	= require('request'),
 	app 	= express();
 
-var latLong = "45.5330,-122.6894";  
+var latLong = '45.5330,-122.6894';  
 var url     = 'https://api.forecast.io/forecast';
+
 var apiKey = fs.readFileSync('api.txt', 'utf8', function(err, contents) {
 	if (err) throw err;
 	return contents;
 });
 
-console.log(apiKey);
-
 url += '/' + apiKey + '/' + latLong;
-
-console.log(url);
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.logger('dev'));
@@ -35,6 +32,7 @@ request(url, function(err, apiResponse, body) {
 
 	var data = JSON.parse(body);
 	currently(data);
+	console.log(data);
 
 	// httpFunction(data);
 
@@ -65,7 +63,7 @@ function currently (data) {
 // }
 
 app.get('/data', function(req, res) {
-	// res.json(currently);
+	res.json(currently);
 });
 
 app.get('/', function(req, res){
